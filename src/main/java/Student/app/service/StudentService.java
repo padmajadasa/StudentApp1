@@ -14,11 +14,24 @@ import Student.app.repo.StudentRespoaitary;
 @Service
 public class StudentService {
 //Map < String,Student> map = new HashMap<String,Student>();
-@Autowired
-StudentRespoaitary studentRepo;
-public void save (Student s) {
-	studentRepo.save(s);}
-public List<Student> allStd(){
-	return studentRepo.findAll();}
+	@Autowired
+	StudentRespoaitary studentRepo;
+
+	public void save(Student s) {
+		studentRepo.save(s);
+	}
+
+	public List<Student> allStd() {
+		return studentRepo.findAll();
+	}
+
+	public List<Student> getStudent(String name) {
+	 
+		return studentRepo.findByName(name);
+	}
+
+	public List<Student> getStudent(String name, String phone) {
+		return studentRepo.findByNameAndPhoneNumner(name,phone);
+	}
 }
 

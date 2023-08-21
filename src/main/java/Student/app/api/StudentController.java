@@ -6,6 +6,7 @@ import java.util.UUID;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
@@ -35,6 +36,19 @@ public class StudentController {
 	      student.stream().forEach(a-> System.out.println(a.getName()));
 	      return student;
 	      }
+	
+
+	@GetMapping("/getStudent/{name}")
+	public List<Student> getStudent(@PathVariable String name) {
+	
+		return ss.getStudent(name);
+	}
+	
+	@GetMapping("/getStudent/{name}/{phone}")
+	public List<Student> getStudent(@PathVariable String name,@PathVariable String phone) {
+	
+		return ss.getStudent(name,phone);
+	}
 	
 	@PostMapping
 	public List<Student> addStudent(@RequestBody Student st) {
