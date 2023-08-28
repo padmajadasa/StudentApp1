@@ -10,6 +10,8 @@ public interface StudentRespoaitary  extends JpaRepository<Student, String>{
 
 	List<Student> findByName(String name);
 
+	List<Student> findByPhoneNumner(String phone);
+
 	List<Student> findByNameAndPhoneNumner(String name, String phone);
 	
 	List<Student> findBySchoolName(String schoolName);
