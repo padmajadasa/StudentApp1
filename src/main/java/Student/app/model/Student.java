@@ -13,6 +13,7 @@ public class Student {
 	   private String phoneNumner;
 	   private String section;
 	   private String address;
+	   private String schoolName;
 	public String getId() {
 		return id;
 	}
