@@ -14,6 +14,7 @@ public class Student {
 	   private String section;
 	   private String address;
 	   private String schoolName;
+	   
 	public String getId() {
 		return id;
 	}
@@ -43,6 +44,12 @@ public class Student {
 	}
 	public void setAddress(String address) {
 		this.address = address;
+	}
+	public String getSchoolName() {
+		return schoolName;
+	}
+	public void setSchoolName(String schoolName) {
+		this.schoolName = schoolName;
 	}
 	   
 	   
