@@ -8,6 +8,7 @@ import java.util.Map;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import Student.app.model.School;
 import Student.app.model.Student;
 import Student.app.repo.StudentRespoaitary;
 
@@ -32,6 +33,17 @@ public class StudentService {
 
 	public List<Student> getStudent(String name, String phone) {
 		return studentRepo.findByNameAndPhoneNumner(name,phone);
+	}
+	
+	public void addSchool() {
+		
+		School s= new School();
+		s.setName("NewYark");
+		s.setId("1234");
+		s.setLocation("abcd");
+		
+		
+		
 	}
 }
 
